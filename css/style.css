@@ -1,0 +1,103 @@
+:root{
+  --e-global-color-primary: #6EC1E4;
+    --e-global-color-secondary: #54595F;
+    --e-global-color-text: #54595E;
+    --e-global-color-accent: #3F96B4;
+    --e-global-color-17d712d: #326180;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  
+}
+header{
+  background-color: #fff;
+}
+main{
+    flex-grow: 1;
+    background-color: #FAFAFA;
+   
+}
+
+.menu a{
+  color: var(--e-global-color-17d712d);
+  font-weight: 400;
+  font-size: 18px;
+}
+h1, h2 {
+      font-weight: 700;
+      color: var(--e-global-color-accent);
+    }
+
+    p {
+      font-weight: 400;
+    }
+
+    .servicios{
+      background-color: var(--e-global-color-17d712d);
+      color: #FAFAFA;
+    }
+    .icon{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;         /* Hace el div circular */
+      border: 1px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;               /* Color del ícono */
+      font-size: 32px;            /* Tamaño del ícono */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
+    }
+    .btn-contacto{
+      font-size: 18px;
+      font-weight:600;
+        width: 150px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--e-global-color-accent);
+        color: #fff;
+    }
+
+    .item {
+  background-color: #66c1f5;
+  border-radius: 12px;
+  padding: 30px 20px;
+  color: white;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.item::before {
+  content: "★"; /* símbolo flecha */
+  background-color: #59aee3;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+.item h3 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 70px; /* separación del ícono */
+}
+
+.item p {
+  margin-left: 70px;
+  font-size: 16px;
+}
