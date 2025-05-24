@@ -101,3 +101,101 @@ h1, h2 {
   margin-left: 70px;
   font-size: 16px;
 }
+
+/*CONTACTO*/
+
+#lista {
+  padding: 0;
+  text-align: center;
+}
+
+
+#title {
+  color: #3F96B4;
+  position: relative;
+  right: 10px;
+  font-size: 35px;
+}
+
+#boton-contacto {
+  background-color: #3F96B4; 
+  color: white; 
+  border: 2px solid #3F96B4; 
+  transition: all 0.3s ease; 
+}
+
+#boton-contacto:hover {
+  background-color: white; 
+  color: #3F96B4; 
+  border-color: #3F96B4;
+  transform: scale(1.05); 
+}
+
+#horarios{
+  color: #3F96B4;
+}
+
+
+#lista, #direccion, #email, #telefono, #whatsapp {
+  color: #3F96B4;
+}
+/* Estilos para los enlaces */
+a#direccion, 
+a#email, 
+a#telefono, 
+a#whatsapp {
+  color: #3F96B4;
+  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+a#direccion:hover, 
+a#email:hover, 
+a#telefono:hover, 
+a#whatsapp:hover {
+  transform: translateY(-5px);
+  color: #3F96B4; 
+}
+
+a#direccion:hover svg, 
+a#email:hover svg, 
+a#telefono:hover svg, 
+a#whatsapp:hover svg {
+  transform: translateY(-5px);
+}
+
+svg {
+  transition: transform 0.3s ease;
+}
+
+.formulario-contacto{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 2%;
+  color: #fff;
+  position: relative;
+  top: 20px;
+}
+
+.animate__animated.animate__fadeInUp{
+  visibility: visible;
+}
+
+
+footer {
+  background-color: #F0EEE9 ;
+}
+
+footer a,
+footer i,
+footer h5,
+footer li {
+  color: #3F96B4 !important;
+}
+
+footer a.text-decoration-none {
+  color: #3F96B4 !important;
+}
+
