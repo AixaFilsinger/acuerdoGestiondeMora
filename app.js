@@ -65,3 +65,23 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(error => console.error('Error al cargar el archivo JSON:', error));
   });
+
+ //Slider clientes
+// Selección del contenedor y track
+const sliderTrack = document.querySelector('.slider-clientes-track');
+const slides = Array.from(sliderTrack.children);
+
+// Duplicamos los elementos para crear el efecto infinito
+slides.forEach(slide => {
+    const clone = slide.cloneNode(true);
+    sliderTrack.appendChild(clone);
+});
+
+// Ajustamos el ancho del track dinámicamente
+const totalSlides = sliderTrack.children.length;
+const slideWidth = slides[0].offsetWidth + 20; // Incluyendo margen
+sliderTrack.style.width = `${totalSlides * slideWidth}px`;
+
+// Ajustar la duración de la animación basada en el número de imágenes
+const animationDuration = totalSlides * 2; // Modifica 5 para ajustar la velocidad
+sliderTrack.style.animationDuration = `${animationDuration}s`;
