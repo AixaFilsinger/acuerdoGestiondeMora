@@ -114,7 +114,6 @@ h1, h2 {
   color: #3F96B4;
   position: relative;
   right: 10px;
-  font-size: 35px;
 }
 
 #boton-contacto {
@@ -199,3 +198,95 @@ footer a.text-decoration-none {
   color: #3F96B4 !important;
 }
 
+/*SLIDER CLIENTES*/
+
+.slider-clientes .slide-cliente {
+    min-width: 160px; 
+    margin: 0 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+}
+
+.slider-clientes .slide-cliente img {
+    width: 120px;
+    height: 80px; 
+    object-fit: contain;
+    display: block;
+    border-radius: 8px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.slider-clientes .slider-clientes-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 22);
+    will-change: transform;
+    background-color: #FAFAFA;
+}
+
+.slider-clientes .slide-cliente {
+    min-width: 200px; 
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-clientes .slide-cliente img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateY(calc(-200px * 11));
+        transform: translateX(calc(-200px * 11));
+    }
+}
+
+.h1-cliente {
+    text-align: center;
+}
+
+.desc-empresas, 
+.info-empresas{
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: var(--font-size-base);
+}
+
+.info-empresas {
+    display: flex;
+    justify-content: center;
+    text-align: center;  /* Centra el texto dentro del párrafo */
+    font-weight: 400;
+    font-size: var(--font-size-base);
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 10px 3rem;
+    line-height: 1.8;
+    flex-direction: column; 
+}
+
+
+.desc-empresas{
+    font-weight: 600;
+}
+
+.animate__animated {
+    visibility: hidden;
+}
+
+.animate__animated.animate__fadeInUp{
+    visibility: visible;
+}
