@@ -364,3 +364,18 @@ footer a.text-decoration-none {
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
+
+/*SVG*/
+.svg-container {
+  width: 100%;
+  height: auto;
+  max-width: 600px; /* ajustable según el diseño */
+  margin: 0 auto;
+}
+
+.svg-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
