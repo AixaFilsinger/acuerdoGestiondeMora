@@ -85,3 +85,38 @@ sliderTrack.style.width = `${totalSlides * slideWidth}px`;
 // Ajustar la duración de la animación basada en el número de imágenes
 const animationDuration = totalSlides * 2; // Modifica 5 para ajustar la velocidad
 sliderTrack.style.animationDuration = `${animationDuration}s`;
+
+// SLIDER PRINCIPAL CARRUSEL
+
+const slider = document.querySelector('.slider-principal');
+const sliderSlides = slider.querySelectorAll('.slide-principal');
+let sliderIndex = 0;
+const sliderTotalSlides = sliderSlides.length;
+
+function showSlide(i) {
+  sliderIndex = i % sliderTotalSlides;
+  slider.style.transform = `translateX(-${sliderIndex * 100}vw)`;
+
+  sliderSlides.forEach((slide, idx) => {
+    const p = slide.querySelector('p');
+    if (idx === sliderIndex) {
+      // Reiniciar animación texto para el slide activo
+      p.style.animation = 'none';
+      p.style.opacity = '1';
+      p.offsetHeight; // reflow para reiniciar la animación
+      p.style.animation = 'fadeUpText 4s ease forwards';
+    } else {
+      // Resetear opacidad y animación para otros textos
+      p.style.animation = 'none';
+      p.style.opacity = '0';
+    }
+  });
+}
+
+// Iniciar mostrando la primera slide con animación texto
+showSlide(sliderIndex);
+
+// Cambiar slide cada 4 segundos (ajustá el tiempo si querés)
+setInterval(() => {
+  showSlide(sliderIndex + 1);
+}, 4000);
