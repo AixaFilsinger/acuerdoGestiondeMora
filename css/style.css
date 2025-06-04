@@ -75,10 +75,15 @@ h1, h2 {
         background-color: var(--e-global-color-accent);
         color: #fff;
     }
-
+.item:hover {
+  transform: translateY(-5px); /* se eleva un poquito */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* sombra más intensa */
+}
     .item {
   background-color: #66c1f5;
-  border-radius: 12px;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
   padding: 30px 20px;
   color: white;
   margin-bottom: 20px;
@@ -89,7 +94,22 @@ h1, h2 {
   min-height: 200px;
   position: relative;
   overflow: hidden;
-}
+}/*.item {
+  background-color: #66c1f5;
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}*/
 
 .item::before {
   content: "★"; /* símbolo flecha */
@@ -104,7 +124,7 @@ h1, h2 {
   justify-content: center;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 1;
 }
 
 
@@ -125,6 +145,27 @@ h1, h2 {
   font-style: italic;
   font-size: 20px;
 }
+
+.custom-img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.custom-img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 576px) {
+  .custom-img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
 
 /*CONTACTO*/
 
