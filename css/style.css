@@ -5,6 +5,16 @@
     --e-global-color-accent: #3F96B4;
     --e-global-color-17d712d: #326180;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
 body {
   font-family: 'Roboto', sans-serif;
    padding-top: 80px;
@@ -27,6 +37,12 @@ main{
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
+}
+.parrafo{
+  text-align: justify;
+  padding: 5px;
+  font-family: "Roboto", Sans-serif;
+ font-weight: 400;
 }
 
 .menu .navbar-brand img {
@@ -79,22 +95,26 @@ h1, h2 {
   transform: translateY(-5px); /* se eleva un poquito */
   box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* sombra más intensa */
 }
-    .item {
+.item {
   background-color: #66c1f5;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  aspect-ratio: 1 / 1; /* mantiene forma circular */
   padding: 30px 20px;
   color: white;
   margin-bottom: 20px;
   display: flex;
   gap: 15px;
   align-items: center;
+  justify-content: flex-start;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  min-height: 200px;
   position: relative;
   overflow: hidden;
-}/*.item {
+  transition: transform 0.3s ease;
+}
+/*.item {
   background-color: #66c1f5;
   border-radius: 50%;
   width: 280px;
@@ -131,13 +151,64 @@ h1, h2 {
 .item h3 {
   font-weight: 700;
   font-size: 20px;
-  margin-left: 70px; /* separación del ícono */
+  margin-left: 50px; /* separación del ícono */
 }
 
 .item p {
-  margin-left: 70px;
-  font-size: 16px;
+  margin-left: 50px;
+  font-size: 14px;
+  font-family: "Roboto", Sans-serif;
+    font-weight: 400;
 }
+@media (max-width: 576px) {
+  .item {
+    max-width: 90%; /* o incluso 100% si querés que ocupe todo el ancho */
+    padding: 20px 10px;
+  }
+
+  .item h3,
+  .item p {
+    margin-left: 60px;
+    font-size: 16px;
+  }
+
+  .item::before {
+    font-size: 24px;
+    width: 50px;
+  }
+}
+@media only screen 
+  and (min-device-width: 390px) 
+  and (max-device-width: 390px) 
+  and (min-device-height: 844px) 
+  and (max-device-height: 844px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    
+  /* Estilos específicos para iPhone 12 Pro */
+  .item {
+    max-width: 100%;
+   
+    padding: 25px;
+    font-size: 14px;
+  }
+}
+@media only screen 
+  and (min-device-width: 430px) 
+  and (max-device-width: 430px) 
+  and (min-device-height: 932px) 
+  and (max-device-height: 932px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    
+  /* Estilos específicos para iPhone 14 Pro Max */
+  .item {
+    max-width: 100%;
+    padding: 20px;
+    font-size: 18px;
+  }
+}
+
+
+
 
 #subtitulo{
   position: relative;
