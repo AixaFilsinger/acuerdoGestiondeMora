@@ -162,7 +162,7 @@ h1, h2 {
 }
 @media (max-width: 576px) {
   .item {
-    max-width: 100%; /* o incluso 100% si querés que ocupe todo el ancho */
+    max-width: 100%; 
     padding: 20px 10px;
   }
 
@@ -173,7 +173,7 @@ h1, h2 {
   }
 
   .item::before {
-    font-size: 24px;
+    font-size: 22px;
     width: 50px;
   }
 }
