@@ -173,7 +173,7 @@ h1, h2 {
   }
 
   .item::before {
-    font-size: 22px;
+    font-size: 20px;
     width: 50px;
   }
 }
