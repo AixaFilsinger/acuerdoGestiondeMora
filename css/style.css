@@ -169,7 +169,7 @@ h1, h2 {
   .item h3,
   .item p {
     margin-left: 60px;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .item::before {
