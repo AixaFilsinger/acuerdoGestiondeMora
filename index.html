@@ -559,8 +559,43 @@ Entre 2019 y 2022 iniciamos nuestra expansión regional, adaptándonos a las par
           </div>
         </div>
     </section>
+    <!-- Button trigger modal -->
+<button type="button" class="btn-contacto boton-flotante" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+ Quiero saber<br>de mi deuda<i class="bi bi-whatsapp ms-2 fs-2"></i>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Para saber más ingrese su:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+           <div class="col-12 mb-3">
+                  <label for="dni" class="form-label">DNI</label>
+                  <input type="number" class="form-control" id="dni" name="dni" required />
+                  <button type="button" class="btn-contacto mt-2" >
+                  Consultar
+                  </button>
+                </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Ir a WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</div>
+   
+    
     <!-- Botón flotante derecho tipo Gesinco -->
-<a href="https://wa.link/zqltr8" target="_blank" class="btn-contacto boton-flotante">Quiero saber<br>de mi deuda<i class="bi bi-whatsapp ms-2 fs-2"></i></a>
+     <!--
+<a href="https://wa.link/zqltr8" target="_blank" class="btn-contacto boton-flotante">
+  Quiero saber<br>de mi deuda<i class="bi bi-whatsapp ms-2 fs-2"></i></a>-->
 
   </main>
 
